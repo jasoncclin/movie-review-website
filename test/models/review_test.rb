@@ -4,7 +4,7 @@ class ReviewTest < ActiveSupport::TestCase
   
   def setup
     @user = User.create(name: "simon", email: "simon@example.com")
-    @review = @user.reviews.build(name: "veg", description: "delicious")
+    @review = @user.reviews.build(name: "veg",movie: "Matrix", description: "delicious")
   end
   
   test "movie should be present" do
