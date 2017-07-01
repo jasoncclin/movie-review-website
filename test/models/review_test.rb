@@ -3,7 +3,8 @@ require 'test_helper'
 class ReviewTest < ActiveSupport::TestCase
   
   def setup
-    @user = User.create(name: "simon", email: "simon@example.com")
+    @user = User.create(name: "simon", email: "simon@example.com",
+                        password: "password", password_confirmation: "password")
     @review = @user.reviews.build(name: "veg",movie: "Matrix", description: "delicious")
   end
   
