@@ -27,6 +27,8 @@ class ReviewsTest < ActionDispatch::IntegrationTest
     assert_match @review.name, response.body
     assert_match @review.description, response.body
     assert_match @user.name, response.body
+    assert_select 'a[href=?]', edit_review_path(@review), text: "Edit"
+    assert_select 'a[href=?]', review_path(@review), text: "Delete"
   end
   
   test "create new valid review" do
