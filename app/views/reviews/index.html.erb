@@ -1,5 +1,6 @@
 <%= render 'shared/page_title', title: "All Reviews" %>
 
+<p class="col-md-offset-2"><%= link_to "Create new review", new_review_path %></p>
 <% @reviews.each do |review| %>
   <div class= "row">
     <div class= "col-md-2">
