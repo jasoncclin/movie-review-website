@@ -1,0 +1,22 @@
+<%= render 'shared/page_title', title: "All Reviews" %>
+
+<p class="col-md-offset-2"><%= link_to "Create new review", new_review_path %></p>
+<% @reviews.each do |review| %>
+  <div class= "row">
+    <div class= "col-md-2">
+      <section class= "center">
+        
+      </section>
+    </div>
+    <div class= "col-md-8 well">
+      <h4><%= link_to review.name, review_path(review) %></h4>
+      <p><%= review.movie %></p>
+      <p><%= truncate(review.description, length: 100) %></p>
+      <p>Written by:<%= review.user.name %></p>
+      <p>
+      <span class= "quiet"><small>Created: <%= time_ago_in_words(review.created_at) %> ago</small></span>
+      </p>
+    </div>
+  </div>
+
+<% end %>

@@ -19,3 +19,23 @@ $navbar-default-bg: black;
 #logo:hover {
   text-decoration: underline;
 }
+
+.description {
+  margin-top: 0;
+}
+
+.well a {
+  color: black;
+}
+ 
+.col-md-8.well {
+  background-color:rgba(0, 0, 0, 0.3);
+  color: gray;
+}
+
+.review-actions {
+  padding-top: 5px;
+  a {
+    color: gray;
+  }
+}
