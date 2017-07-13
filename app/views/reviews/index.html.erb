@@ -1,5 +1,4 @@
-<h1 align= "center">Listing all Reviews</h1>
-<hr />
+<%= render 'shared/page_title', title: "All Reviews" %>
 
 <% @reviews.each do |review| %>
   <div class= "row">
@@ -9,7 +8,8 @@
       </section>
     </div>
     <div class= "col-md-8 well">
-      <h4><%= review.name %></h4>
+      <h4><%= link_to review.name, review_path(review) %></h4>
+      <p><%= review.movie %></p>
       <p><%= truncate(review.description, length: 100) %></p>
       <p>Written by:<%= review.user.name %></p>
       <p>
