@@ -1,0 +1,11 @@
+<h1> Results for <%= @searchBarKeyword %> </h1>
+<h4> 
+	<% @arr.each do |arrEle| %>
+	
+		<% if arrEle["media_type"] == "movie" %>
+			<br>
+				<%= link_to arrEle['title'], {controller:"pages", action:"movie", id:arrEle['id'], title:arrEle['title'], poster_path:arrEle['poster_path'], overview:arrEle['overview'], release_date:arrEle['release_date']} %>
+ 			</br>
+		<% end %>
+	<% end %>
+</h4>
