@@ -1,18 +1,11 @@
 Rails.application.routes.draw do
-  root "pages#home"
-  get 'pages/home', to: 'pages#home'
+  get 'welcome/index'
   
-  resources :reviews
+  resources :articles do
+    resources :comments
+  end
   
-  get '/signup', to: 'users#new'
-  resources :users, except: [:new]
-  
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
-  
+  root 'welcome#index'
 
-  get 'pages/searchresults', to: 'pages#searchresults'
-  
-  get 'pages/movie', to: 'pages#movie'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
