@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get 'pages/searchresults', to: 'pages#searchresults'
   
   get 'pages/movie', to: 'pages#movie'
+
 end
