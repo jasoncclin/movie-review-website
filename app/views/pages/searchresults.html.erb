@@ -1,11 +1,29 @@
-<h1> Results for <%= @searchBarKeyword %> </h1>
-<h4> 
-	<% @arr.each do |arrEle| %>
-	
-		<% if arrEle["media_type"] == "movie" %>
-			<br>
-				<%= link_to arrEle['title'], {controller:"pages", action:"movie", id:arrEle['id'], title:arrEle['title'], poster_path:arrEle['poster_path'], overview:arrEle['overview'], release_date:arrEle['release_date']} %>
- 			</br>
-		<% end %>
+<h1> 
+	<style> h3 {text-align:center;} </style>
+	<!-- No results found -->
+	<% if @totRes == 0 %>
+		<h2> Sorry! No results found for <%= @searchBarKeyword %> <br></br>
+			Here's a picture of a cat instead!<br></br>
+		</h2>
+		<h3>
+			<img src="http://www.eastcottvets.co.uk/uploads/Animals/gingerkitten.jpg">
+		</h3>
+	<!-- Empty string searched -->
+	<% elsif @searchBarKeyword == ""%>
+		<h2> Sorry! Please enter a word or phrase to search! </h2>
+		<style> h3 {text-align:center;} </style>
+		<h3><img src="http://et-38d7.kxcdn.com/twitter-svg/1f914.svg" align="center" width="750" height="750"></h3>
+	<!-- Results found -->
+	<% else %>
+		<h1> Results found for <%= @searchBarKeyword %> </h1>
+			<% @arr.each do |arrEle| %>
+				<% if arrEle["media_type"] == "movie" %>
+					<br>
+						<%= link_to arrEle['title'], {controller:"pages", action:"movie", id:arrEle['id'], title:arrEle['title'], poster_path:arrEle['poster_path'], overview:arrEle['overview'], release_date:arrEle['release_date']} %>
+		 			</br>
+				<% end %>
+			<% end %>
+			<br> </br>
+		<h1> To see reviews for <%= @searchBarKeyword %> <%= link_to "click here", {controller:"reviews", action:"index"}%></h1>
 	<% end %>
-</h4>
+</h1>
