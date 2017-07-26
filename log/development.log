@@ -2903,3 +2903,550 @@ Completed 200 OK in 64ms (Views: 62.4ms)
 >>>>>>> master
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-26 12:49:28 -0700
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (238.6ms)
+  Rendered layouts/_navigation.html.erb (9.3ms)
+  Rendered layouts/_messages.html.erb (2.0ms)
+Completed 200 OK in 43475ms (Views: 42483.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 12:50:41 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.5ms)
+  [1m[36mReview Load (120.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (1237.2ms)
+  Rendered layouts/_navigation.html.erb (9.6ms)
+  Rendered layouts/_messages.html.erb (10.6ms)
+Completed 200 OK in 2022ms (Views: 1417.2ms | ActiveRecord: 464.5ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 12:50:47 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (2.0ms)
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (405.7ms)
+  Rendered layouts/_navigation.html.erb (9.7ms)
+  Rendered layouts/_messages.html.erb (2.0ms)
+Completed 200 OK in 1020ms (Views: 958.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/reviews/2/edit" for 127.0.0.1 at 2017-07-26 12:50:55 -0700
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (5.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (9.6ms)
+  Rendered reviews/edit.html.erb within layouts/application (803.6ms)
+  Rendered layouts/_navigation.html.erb (13.0ms)
+  Rendered layouts/_messages.html.erb (6.3ms)
+Completed 200 OK in 1313ms (Views: 1260.4ms | ActiveRecord: 5.0ms)
+
+
+Started PATCH "/reviews/2" for 127.0.0.1 at 2017-07-26 12:51:10 -0700
+Processing by ReviewsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zVBgcL8jgLH0V61/FpQtFoBuJFolWsh5F81FkdiZdIgXmUo8xEhmJCXFRjeD8u9Qc2dCHXLGcmOF/i9JI+dKkA==", "review"=>{"movie"=>"Pokemon The First Movie", "name"=>"Pikachu", "description"=>"Pikachu is so cool. Charizard is cooler"}, "commit"=>"Update Review", "id"=>"2"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (70.8ms)[0m  [1m[33mUPDATE "reviews" SET "description" = ?, "updated_at" = ? WHERE "reviews"."id" = ?[0m  [["description", "Pikachu is so cool. Charizard is cooler"], ["updated_at", "2017-07-26 19:51:10.668862"], ["id", 2]]
+  [1m[35m (443.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/reviews/2
+Completed 302 Found in 557ms (ActiveRecord: 514.8ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 12:51:11 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (65.7ms)
+  Rendered layouts/_navigation.html.erb (10.1ms)
+  Rendered layouts/_messages.html.erb (3.0ms)
+Completed 200 OK in 640ms (Views: 602.3ms | ActiveRecord: 1.2ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20170726200616)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170726200616"]]
+  [1m[35m (75.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-07-26 13:21:01 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (99.0ms)
+  Rendered layouts/_navigation.html.erb (14.9ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 7743ms (Views: 7229.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 13:21:23 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (18.3ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (553.6ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (1.6ms)
+Completed 200 OK in 1181ms (Views: 938.5ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:21:26 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (5.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (48.7ms)
+  Rendered layouts/_navigation.html.erb (7.6ms)
+  Rendered layouts/_messages.html.erb (6.0ms)
+Completed 200 OK in 498ms (Views: 472.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-26 13:23:57 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (108.3ms)
+Started GET "/" for 127.0.0.1 at 2017-07-26 13:23:58 -0700
+Processing by PagesController#home as HTML
+  Rendered layouts/_navigation.html.erb (11.9ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 1194ms (Views: 674.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (122.9ms)
+  Rendered layouts/_navigation.html.erb (7.9ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 920ms (Views: 471.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 13:24:01 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (5.0ms)
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (43.3ms)
+  Rendered layouts/_navigation.html.erb (30.9ms)
+  Rendered layouts/_messages.html.erb (1.8ms)
+Completed 200 OK in 478ms (Views: 469.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:24:06 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.5ms)
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (2140.3ms)
+Completed 500 Internal Server Error in 2193ms (ActiveRecord: 17.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review' for #<#<Class:0x007f9c91c0f910>:0x007f9c918f7c28>
+Did you mean?  @review):
+    13:   </p>
+    14:   
+    15:   <br>
+    16:   <h2> <%= review.comments.count %> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+  
+app/views/reviews/show.html.erb:16:in `_app_views_reviews_show_html_erb__955960242321138181_70155216882360'
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 13:25:08 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.9ms)
+  [1m[36mReview Load (5.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (44.6ms)
+  Rendered layouts/_navigation.html.erb (13.0ms)
+  Rendered layouts/_messages.html.erb (19.1ms)
+Completed 200 OK in 586ms (Views: 576.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:25:14 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (10.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (253.9ms)
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 22.2ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155104246440'
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 13:28:22 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.8ms)
+  [1m[36mReview Load (5.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (54.8ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 542ms (Views: 515.2ms | ActiveRecord: 22.4ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:28:27 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (6.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (17.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (49.1ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 18.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155218442540'
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 13:29:16 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.8ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (29.4ms)
+  Rendered layouts/_navigation.html.erb (11.4ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 453ms (Views: 442.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:29:20 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (93.0ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for #<Review:0x007f9c8c29ac90>
+Did you mean?  comments
+               comments=):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comment %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comment/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155171581220'
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 13:29:45 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (2.0ms)
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (69.2ms)
+  Rendered layouts/_navigation.html.erb (10.3ms)
+  Rendered layouts/_messages.html.erb (14.1ms)
+Completed 200 OK in 845ms (Views: 815.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:29:49 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (5.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (53.8ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comment/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155221643600'
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:30:37 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (9.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (61.0ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 10.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comment/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155217203820'
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 13:31:35 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.0ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (38.7ms)
+  Rendered layouts/_navigation.html.erb (7.5ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 481ms (Views: 470.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:31:39 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (15.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (49.0ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 16.2ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155170268040'
+Started GET "/reviews" for 127.0.0.1 at 2017-07-26 13:35:35 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (5.4ms)
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (41.4ms)
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+Completed 200 OK in 405ms (Views: 400.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:35:39 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (17.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (2.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (94.6ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155215770540'
+Started GET "/reviews/" for 127.0.0.1 at 2017-07-26 13:37:04 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (6.0ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (212.2ms)
+  Rendered layouts/_navigation.html.erb (10.3ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 668ms (Views: 581.9ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:37:08 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (9.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (87.6ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 11.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155219486600'
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:37:10 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (48.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (7.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (1.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (150.4ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 51.4ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155208055020'
+Started GET "/reviews/" for 127.0.0.1 at 2017-07-26 13:38:53 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (9.7ms)
+  [1m[36mReview Load (9.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (272.6ms)
+  Rendered layouts/_navigation.html.erb (14.5ms)
+  Rendered layouts/_messages.html.erb (1.7ms)
+Completed 200 OK in 720ms (Views: 673.2ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:38:57 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (2.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (114.1ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155207136700'
+Started GET "/reviews/" for 127.0.0.1 at 2017-07-26 13:39:27 -0700
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.0ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (235.7ms)
+  Rendered layouts/_navigation.html.erb (8.7ms)
+  Rendered layouts/_messages.html.erb (1.6ms)
+Completed 200 OK in 651ms (Views: 600.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-07-26 13:39:31 -0700
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (6.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?[0m  [["review_id", 2]]
+  Rendered reviews/show.html.erb within layouts/application (98.8ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 13.1ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: comments.review_id: SELECT "comments".* FROM "comments" WHERE "comments"."review_id" = ?):
+    14:   
+    15:   <br>
+    16:   <h2> Comments </h2>
+    17:     <%= render @review.comments %>
+    18:     <h3>Add a comment</h3>
+    19:     <%= render 'comments/form' %>
+    20: 
+  
+app/views/reviews/show.html.erb:17:in `_app_views_reviews_show_html_erb__955960242321138181_70155172107440'

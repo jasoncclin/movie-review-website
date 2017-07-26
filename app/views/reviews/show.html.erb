@@ -12,6 +12,12 @@
     <div class="pull-right">created: <%= time_ago_in_words(@review.created_at) %></div>
   </p>
   
+  <br>
+  <h2> Comments </h2>
+    <%= render @review.comments %>
+    <h3>Add a comment</h3>
+    <%= render 'comments/form' %>
+
   <div class="review-actions">
     <%= link_to "Edit" , edit_review_path(@review), class:"btn btn-xs btn-warning" %>
     <%= link_to "Delete", review_path(@review), method: :delete,
