@@ -7710,3 +7710,558 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 206ms (Views: 61.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/users/2" for 142.58.15.172 at 2017-07-27 22:09:04 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered reviews/_review.html.erb (13.8ms)
+  Rendered users/show.html.erb within layouts/application (22.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 71.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/reviews/5" for 142.58.15.172 at 2017-07-27 22:09:07 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (8.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:09:11 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 234ms (Views: 87.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/movie?id=324852&overview=Gru+and+his+wife+Lucy+must+stop+former+%2780s+child+star+Balthazar+Bratt+from+achieving+world+domination.&poster_path=%2F5qcUGqWoWhEsoQwNUrtf3y3fcWn.jpg&release_date=2017-06-29&title=Despicable+Me+3" for 142.58.15.172 at 2017-07-27 22:09:12 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"324852", "overview"=>"Gru and his wife Lucy must stop former '80s child star Balthazar Bratt from achieving world domination.", "poster_path"=>"/5qcUGqWoWhEsoQwNUrtf3y3fcWn.jpg", "release_date"=>"2017-06-29", "title"=>"Despicable Me 3"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new?movie=Despicable+Me+3" for 142.58.15.172 at 2017-07-27 22:09:23 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie"=>"Despicable Me 3"}
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered reviews/_form.html.erb (5.2ms)
+  Rendered reviews/new.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:09:26 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 240ms (Views: 97.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:09:44 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 219ms (Views: 72.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:09:46 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 201ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews" for 142.58.15.172 at 2017-07-27 22:09:48 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (11.8ms)
+  Rendered reviews/index.html.erb within layouts/application (15.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 131ms (Views: 128.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reviews/2" for 142.58.15.172 at 2017-07-27 22:17:25 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/reviews/2" for 142.58.15.172 at 2017-07-27 22:17:27 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Rqz/b2ZJu/B8LcqS/UBL8zxKXfG0xttP/HSlRgz1l3Aue137ftcP++rjHIlwWtC0Fz5gjkQK0hwCcNWWgwVp8Q==", "id"=>"2"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 2]]
+  [1m[35m (42.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://railscourse-sibeatriz.c9users.io/reviews
+Completed 302 Found in 48ms (ActiveRecord: 43.6ms)
+
+
+Started GET "/reviews" for 142.58.15.172 at 2017-07-27 22:17:28 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (5.6ms)
+  Rendered reviews/index.html.erb within layouts/application (8.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reviews" for 142.58.15.172 at 2017-07-27 22:17:29 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (5.8ms)
+  Rendered reviews/index.html.erb within layouts/application (8.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 171ms (Views: 169.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reviews/new" for 142.58.15.172 at 2017-07-27 22:17:31 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered reviews/_form.html.erb (5.4ms)
+  Rendered reviews/new.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (66.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (70.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 142ms (Views: 72.6ms | ActiveRecord: 66.8ms)
+
+
+Started POST "/reviews" for 142.58.15.172 at 2017-07-27 22:19:52 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4wtzf5Qkek1CP+11IygzE9bHS2wdd74Pow/A4X9WeYFHIjLvUOG3TsbMMNG5UtQB6bVEL5mgUtk0WWe5lxTCzg==", "review"=>{"movie"=>"", "name"=>"", "description"=>""}, "commit"=>"Create Review"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (2.8ms)
+  Rendered reviews/_form.html.erb (7.7ms)
+  Rendered reviews/new.html.erb within layouts/application (121.0ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 189ms (Views: 174.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:19:54 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 204ms (Views: 65.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/movie?id=324852&overview=Gru+and+his+wife+Lucy+must+stop+former+%2780s+child+star+Balthazar+Bratt+from+achieving+world+domination.&poster_path=%2F5qcUGqWoWhEsoQwNUrtf3y3fcWn.jpg&release_date=2017-06-29&title=Despicable+Me+3" for 142.58.15.172 at 2017-07-27 22:19:55 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"324852", "overview"=>"Gru and his wife Lucy must stop former '80s child star Balthazar Bratt from achieving world domination.", "poster_path"=>"/5qcUGqWoWhEsoQwNUrtf3y3fcWn.jpg", "release_date"=>"2017-06-29", "title"=>"Despicable Me 3"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new?movie=Despicable+Me+3" for 142.58.15.172 at 2017-07-27 22:19:56 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie"=>"Despicable Me 3"}
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered reviews/_form.html.erb (5.5ms)
+  Rendered reviews/new.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 85ms (Views: 82.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/reviews" for 142.58.15.172 at 2017-07-27 22:19:58 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qyomcS9U/BBd5kLZ8AWNUJdCVXBPCC25ZzS4eNt48WwPA2fh65ExE9kVn31qf2pCqDBaM8vfwW/wYh8gMzpKIw==", "review"=>{"movie"=>"Despicable Me 3", "name"=>"", "description"=>""}, "commit"=>"Create Review"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered reviews/_form.html.erb (4.5ms)
+  Rendered reviews/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reviews" for 142.58.15.172 at 2017-07-27 22:20:03 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vxYyXYYln0Z5s23H/JU42o7sTbK4XaprKmYURxc0nY/XwZDJnrsrTe99u9xxj6OdpZhwzUiRozjUYmSXmMRjDg==", "review"=>{"movie"=>"Despicable Me 3", "name"=>"sdfsdfsdf", "description"=>"sdfsdfsdf"}, "commit"=>"Create Review"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("name", "movie", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "sdfsdfsdf"], ["movie", "Despicable Me 3"], ["description", "sdfsdfsdf"], ["created_at", "2017-07-27 22:20:03.869901"], ["updated_at", "2017-07-27 22:20:03.869901"], ["user_id", 2]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://railscourse-sibeatriz.c9users.io/reviews/7
+Completed 302 Found in 16ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/reviews/7" for 142.58.15.172 at 2017-07-27 22:20:03 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (15.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 84ms (Views: 81.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reviews/7/edit" for 142.58.15.172 at 2017-07-27 22:20:08 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering reviews/edit.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered reviews/_form.html.erb (4.6ms)
+  Rendered reviews/edit.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 80.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reviews" for 142.58.15.172 at 2017-07-27 22:20:10 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (7.5ms)
+  Rendered reviews/index.html.erb within layouts/application (10.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:25:35 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 205ms (Views: 65.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/movie?id=339964&overview=In+the+28th+century%2C+Valerian+and+Laureline+are+special+operatives+charged+with+keeping+order+throughout+the+human+territories.+On+assignment+from+the+Minister+of+Defense%2C+the+two+undertake+a+mission+to+Alpha%2C+an+ever-expanding+metropolis+where+species+from+across+the+universe+have+converged+over+centuries+to+share+knowledge%2C+intelligence%2C+and+cultures.+At+the+center+of+Alpha+is+a+mysterious+dark+force+which+threatens+the+peaceful+existence+of+the+City+of+a+Thousand+Planets%2C+and+Valerian+and+Laureline+must+race+to+identify+the+menace+and+safeguard+not+just+Alpha%2C+but+the+future+of+the+universe.&poster_path=%2F1gAUf4f1748wSukyC3j1OtMRbeA.jpg&release_date=2017-07-20&title=Valerian+and+the+City+of+a+Thousand+Planets" for 142.58.15.172 at 2017-07-27 22:25:38 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"339964", "overview"=>"In the 28th century, Valerian and Laureline are special operatives charged with keeping order throughout the human territories. On assignment from the Minister of Defense, the two undertake a mission to Alpha, an ever-expanding metropolis where species from across the universe have converged over centuries to share knowledge, intelligence, and cultures. At the center of Alpha is a mysterious dark force which threatens the peaceful existence of the City of a Thousand Planets, and Valerian and Laureline must race to identify the menace and safeguard not just Alpha, but the future of the universe.", "poster_path"=>"/1gAUf4f1748wSukyC3j1OtMRbeA.jpg", "release_date"=>"2017-07-20", "title"=>"Valerian and the City of a Thousand Planets"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new?movie=Valerian+and+the+City+of+a+Thousand+Planets" for 142.58.15.172 at 2017-07-27 22:25:40 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie"=>"Valerian and the City of a Thousand Planets"}
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered reviews/_form.html.erb (4.1ms)
+  Rendered reviews/new.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:25:44 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 214ms (Views: 75.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/movie?id=339967&overview=A+woman+discovers+that+severe+catastrophic+events+are+somehow+connected+to+the+mental+breakdown+from+which+she%27s+suffering.&poster_path=%2F4VOyofBd1pexblxtDZYtYIk7NI4.jpg&release_date=2017-04-06&title=Colossal" for 142.58.15.172 at 2017-07-27 22:25:58 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"339967", "overview"=>"A woman discovers that severe catastrophic events are somehow connected to the mental breakdown from which she's suffering.", "poster_path"=>"/4VOyofBd1pexblxtDZYtYIk7NI4.jpg", "release_date"=>"2017-04-06", "title"=>"Colossal"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/movie?id=353491&overview=The+last+Gunslinger%2C+Roland+Deschain%2C+has+been+locked+in+an+eternal+battle+with+Walter+O%E2%80%99Dim%2C+also+known+as+the+Man+in+Black%2C+determined+to+prevent+him+from+toppling+the+Dark+Tower%2C+which+holds+the+universe+together.+With+the+fate+of+the+worlds+at+stake%2C+good+and+evil+will+collide+in+the+ultimate+battle+as+only+Roland+can+defend+the+Tower+from+the+Man+in+Black.&poster_path=%2Fi9GUSgddIqrroubiLsvvMRYyRy0.jpg&release_date=2017-07-27&title=The+Dark+Tower" for 142.58.15.172 at 2017-07-27 22:26:06 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"353491", "overview"=>"The last Gunslinger, Roland Deschain, has been locked in an eternal battle with Walter O’Dim, also known as the Man in Black, determined to prevent him from toppling the Dark Tower, which holds the universe together. With the fate of the worlds at stake, good and evil will collide in the ultimate battle as only Roland can defend the Tower from the Man in Black.", "poster_path"=>"/i9GUSgddIqrroubiLsvvMRYyRy0.jpg", "release_date"=>"2017-07-27", "title"=>"The Dark Tower"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new?movie=The+Dark+Tower" for 142.58.15.172 at 2017-07-27 22:27:13 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie"=>"The Dark Tower"}
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered reviews/_form.html.erb (6.0ms)
+  Rendered reviews/new.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 94ms (Views: 91.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:27:14 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 212ms (Views: 69.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/searchresults?utf8=%E2%9C%93&search=Pokemon&commit=Search" for 142.58.15.172 at 2017-07-27 22:27:20 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#searchresults as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Pokemon", "commit"=>"Search"}
+  Rendering pages/searchresults.html.erb within layouts/application
+  Rendered pages/searchresults.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 212ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/movie?id=12599&overview=Ash+Ketchum+must+put+his+skill+to+the+test+when+he+attempts+to+save+the+world+from+destruction.+The+Greedy+Pokemon+collector+Lawrence+III+throws+the+universe+into+chaos+after+disrupting+the+balance+of+nature+by+capturing+one+of+the+Pokemon+birds+that+rule+the+elements+of+fire%2C+lightning+and+ice.+Will+Ash+have+what+it+takes+to+save+the+world%3F&poster_path=%2FjrwTeoEHCmFEr0J9HENdPAR3dEq.jpg&release_date=1999-07-17&title=Pok%C3%A9mon%3A+The+Movie+2000" for 142.58.15.172 at 2017-07-27 22:27:41 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"12599", "overview"=>"Ash Ketchum must put his skill to the test when he attempts to save the world from destruction. The Greedy Pokemon collector Lawrence III throws the universe into chaos after disrupting the balance of nature by capturing one of the Pokemon birds that rule the elements of fire, lightning and ice. Will Ash have what it takes to save the world?", "poster_path"=>"/jrwTeoEHCmFEr0J9HENdPAR3dEq.jpg", "release_date"=>"1999-07-17", "title"=>"Pokémon: The Movie 2000"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new?movie=Pok%C3%A9mon%3A+The+Movie+2000" for 142.58.15.172 at 2017-07-27 22:27:42 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie"=>"Pokémon: The Movie 2000"}
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered reviews/_form.html.erb (3.7ms)
+  Rendered reviews/new.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:27:46 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 197ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 142.58.15.172 at 2017-07-27 22:27:55 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q9tCftUfpJJlD22nuEl7iqBnedrnFbKq0jHNtPJuRMgrDODqzYEQmfPBu7w1U+DNixNEpRfZu/ksNb1kfZ66SQ=="}
+Redirected to https://railscourse-sibeatriz.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:27:55 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 207ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/movie?id=341013&overview=An+undercover+MI6+agent+is+sent+to+Berlin+during+the+Cold+War+to+investigate+the+murder+of+a+fellow+agent+and+recover+a+missing+list+of+double+agents.&poster_path=%2FkV9R5h0Yct1kR8Hf8sJ1nX0Vz4x.jpg&release_date=2017-07-26&title=Atomic+Blonde" for 142.58.15.172 at 2017-07-27 22:28:01 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"341013", "overview"=>"An undercover MI6 agent is sent to Berlin during the Cold War to investigate the murder of a fellow agent and recover a missing list of double agents.", "poster_path"=>"/kV9R5h0Yct1kR8Hf8sJ1nX0Vz4x.jpg", "release_date"=>"2017-07-26", "title"=>"Atomic Blonde"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 92ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews/new?movie=Atomic+Blonde" for 142.58.15.172 at 2017-07-27 22:28:07 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie"=>"Atomic Blonde"}
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered reviews/_form.html.erb (3.7ms)
+  Rendered reviews/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews/new?movie=Atomic+Blonde" for 142.58.15.172 at 2017-07-27 22:28:52 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Parameters: {"movie"=>"Atomic Blonde"}
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered reviews/_form.html.erb (4.5ms)
+  Rendered reviews/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 142.58.15.172 at 2017-07-27 22:28:55 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 226ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/movie?id=315635&overview=Following+the+events+of+Captain+America%3A+Civil+War%2C+Peter+Parker%2C+with+the+help+of+his+mentor+Tony+Stark%2C+tries+to+balance+his+life+as+an+ordinary+high+school+student+in+Queens%2C+New+York+City%2C+with+fighting+crime+as+his+superhero+alter+ego+Spider-Man+as+a+new+threat%2C+the+Vulture%2C+emerges.&poster_path=%2Fc24sv2weTHPsmDa7jEMN0m2P3RT.jpg&release_date=2017-07-05&title=Spider-Man%3A+Homecoming" for 142.58.15.172 at 2017-07-27 22:28:57 +0000
+Cannot render console from 142.58.15.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"315635", "overview"=>"Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.", "poster_path"=>"/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg", "release_date"=>"2017-07-05", "title"=>"Spider-Man: Homecoming"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
