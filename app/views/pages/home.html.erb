@@ -1,9 +1,11 @@
-<div class= "jumbotron center">
+<% if logged_in? %>
+<% else %>
+	<div class= "jumbotron center">
   <h1>Welcome to Film Studies</h1>
   <h2>Review some stuff</h2>
   <p><%= link_to "Sign Up or Log in", signup_path, class: "btn btn-danger btn-lg" %></p>
 </div>
-
+<% end %>
 
 <div class="container">
 <h2>Latest Movies in Theatres</h2>
@@ -15,12 +17,12 @@
 	<% @titles.each_slice(4) do |titlesEle| %> 
 		<div class= "row">
 		<% titlesEle.each do |movie| %>
-			<div class = "col-lg-3">
-			<% imgLink = "https://image.tmdb.org/t/p/w500" + movie['poster_path'] %>
-			<%= link_to (image_tag imgLink, :size => "250x375", :crop => :fill, class: 'list_image'), {controller:"pages", action:"movie", id:movie['id'], title:movie['title'], poster_path:movie['poster_path'], overview:movie['overview'], release_date:movie['release_date']}, vote_avg:['vote_average'] %>
-			<br></br>
-			<%= link_to movie['title'], {controller:"pages", action:"movie", id:movie['id'], title:movie['title'], poster_path:movie['poster_path'], overview:movie['overview'], release_date:movie['release_date']}%>
-			<br></br>
+			<div class = "col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<% imgLink = "https://image.tmdb.org/t/p/w500" + movie['poster_path'] %>
+				<%= link_to (image_tag imgLink, :size => "250x375", :crop => :fill, class: 'list_image'), {controller:"pages", action:"movie", id:movie['id'], title:movie['title'], poster_path:movie['poster_path'], overview:movie['overview'], release_date:movie['release_date']}, vote_avg:['vote_average'] %>
+				<br></br>
+				<%= link_to movie['title'], {controller:"pages", action:"movie", id:movie['id'], title:movie['title'], poster_path:movie['poster_path'], overview:movie['overview'], release_date:movie['release_date']}%>
+				<br></br>
 			</div>
 		<% end %>
 		</div>
