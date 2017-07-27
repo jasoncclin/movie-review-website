@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
   end
   
   def new
-    @review = Review.new
+    @review = Review.new(:movie => params[:movie])
   end
   
   def create
