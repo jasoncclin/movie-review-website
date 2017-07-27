@@ -1,11 +1,11 @@
 class ReviewsController < ApplicationController
-
+  before_action :set_rev, only: [:show, :edit, :update]
+  
   def index
     @reviews = Review.all
   end
   
   def show
-    @review = Review.find(params[:id])
   end
   
   def new
@@ -24,11 +24,9 @@ class ReviewsController < ApplicationController
   end
   
   def edit
-    @review = Review.find(params[:id])
   end
   
   def update
-    @review = Review.find(params[:id])
     if @review.update(review_params)
       flash[:success] = "Review was updated!"
       redirect_to review_path(@review)
@@ -45,7 +43,11 @@ class ReviewsController < ApplicationController
   
   private
   
-  def review_params
-    params.require(:review).permit(:name, :movie, :description)
-  end
+    def set_rev
+      @review = Review.find(params[:id])
+    end
+  
+    def review_params
+      params.require(:review).permit(:name, :movie, :description)
+    end
 end

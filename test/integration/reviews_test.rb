@@ -21,7 +21,7 @@ class ReviewsTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", review_path(@review2), text: @review2.name
   end
   
-  test "should get recipes show" do
+  test "should get reviews show" do
     get review_path(@review)
     assert_template 'reviews/show'
     assert_match @review.name, response.body
