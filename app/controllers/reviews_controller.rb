@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
   
   def create
     @review = Review.new(review_params)
-    @review.user = User.first
+    @review.user = current_user
     if @review.save
       flash[:success] = "Review was successfully posted"
       redirect_to review_path(@review)

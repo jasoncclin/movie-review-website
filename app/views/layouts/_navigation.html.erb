@@ -14,18 +14,17 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
         <li><%= link_to "Reviews", reviews_path %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><%= link_to 'Login', login_path %></li>
+            <!--<li><a href="#">Another action</a></li>-->
+            <!--<li><a href="#">Something else here</a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">Separated link</a></li>-->
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><%= link_to "Log out", logout_path, method: :delete %></li>
           </ul>
         </li>
       </ul>
@@ -36,8 +35,17 @@
       <% end %>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign Up", signup_path %></li>
-        <li><a href="#">Login</a></li>
+        <% if logged_in? %>
+          <li><%= link_to "Log out", logout_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Login', login_path %></li>
+        <% end %>
+        
+        <% if logged_in? %>
+          <li></li>
+        <% else %>
+          <li><%= link_to "Sign Up", signup_path %></li>
+        <% end %>
 
       </ul>
     </div><!-- /.navbar-collapse -->

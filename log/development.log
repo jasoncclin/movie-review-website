@@ -3281,3 +3281,1506 @@ Processing by ReviewsController#update as HTML
 Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/signup" for 50.67.245.103 at 2017-07-27 03:07:12 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 58.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signup" for 50.67.245.103 at 2017-07-27 03:08:01 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 248ms (Views: 246.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 50.67.245.103 at 2017-07-27 03:08:03 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jqvu2rpMx2cGQ26KZ3/YcFrFjlUJ3+W/rApciqG7kZmk+zxjYSwXXN+doMmp+EyAfvQp2ssG8l/8D44LkXXJBQ==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.6ms)
+  Rendered shared/_errors.html.erb (3.4ms)
+  Rendered users/new.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 109ms (Views: 94.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 50.67.245.103 at 2017-07-27 04:21:28 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (3.4ms)
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 99ms (Views: 92.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 50.67.245.103 at 2017-07-27 04:22:41 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= render 'shared/page_title', title: "#{@user.name}'s profile" %>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__952010295715892715_69983104929180'
+Started GET "/users/1" for 50.67.245.103 at 2017-07-27 04:23:50 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 99ms (Views: 66.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2" for 50.67.245.103 at 2017-07-27 04:24:05 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:17:in `show'
+Started GET "/" for 50.67.245.103 at 2017-07-27 04:25:58 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 211ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 04:27:52 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered reviews/_review.html.erb (2.3ms)
+  Rendered reviews/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% obj.each do |review| %>
+    2:   <div class= "row">
+    3:     <div class= "col-md-2">
+    4:       <section class= "center">
+  
+app/views/reviews/_review.html.erb:1:in `_app_views_reviews__review_html_erb__1322262452169536001_69983071258020'
+app/views/reviews/index.html.erb:5:in `_app_views_reviews_index_html_erb__3425571923244938181_69982968940340'
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 04:28:07 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (15.5ms)
+  Rendered reviews/index.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 75.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 04:29:30 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (3.9ms)
+  Rendered reviews/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for 50.67.245.103 at 2017-07-27 04:29:34 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 50.67.245.103 at 2017-07-27 04:29:40 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered reviews/_review.html.erb (4.1ms)
+  Rendered users/show.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews/2" for 50.67.245.103 at 2017-07-27 04:33:17 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 50.67.245.103 at 2017-07-27 04:46:22 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 16ms
+
+
+  
+ActionController::UnknownFormat (UsersController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1/edit" for 50.67.245.103 at 2017-07-27 04:47:09 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 31ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1/edit" for 50.67.245.103 at 2017-07-27 04:48:33 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 28ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signup" for 50.67.245.103 at 2017-07-27 04:50:14 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/new.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 203ms (Views: 201.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 04:51:18 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (19.8ms)
+  Rendered reviews/index.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 76.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reviews/2" for 50.67.245.103 at 2017-07-27 04:51:55 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 50.67.245.103 at 2017-07-27 04:52:02 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered users/_form.html.erb (5.6ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 159ms (Views: 156.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 50.67.245.103 at 2017-07-27 04:53:33 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/edit.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ubuntu/rails_project/filmstudies/app/views/users/_form.html.erb:42: syntax error, unexpected ',', expecting ')'
+                      , class: "btn btn-primary btn-...
+                       ^
+/home/ubuntu/rails_project/filmstudies/app/views/users/_form.html.erb:42: syntax error, unexpected ')', expecting keyword_end
+...n-primary btn-lg btn-xlarge") );@output_buffer.safe_append='
+...                               ^):
+  
+app/views/users/_form.html.erb:42: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:42: syntax error, unexpected ')', expecting keyword_end
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__3892633659808980013_69983037880100'
+Started GET "/users/1/edit" for 50.67.245.103 at 2017-07-27 04:53:43 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered users/_form.html.erb (4.8ms)
+  Rendered users/edit.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for 50.67.245.103 at 2017-07-27 04:54:16 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/dBKlkcx0cp+9s/dzUPEfq/HR6frRtxsip18d+wDdVdp5OTgnwXfPAlFXy5spvh3o66kV10DJHiL6dw735VSQ==", "user"=>{"name"=>"Simon Zhen", "email"=>"simon@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update account", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "simon@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered shared/_errors.html.erb (1.5ms)
+  Rendered users/_form.html.erb (5.9ms)
+  Rendered users/edit.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 71ms (Views: 63.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/1" for 50.67.245.103 at 2017-07-27 04:55:02 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Olg3Mx3Ok8ialSJCumT804lHz5/J+OLq36Cymjo71HC4COWKxq5D80NL7AF042gjrXZoEAsh9QqPpWAbCvWM7A==", "user"=>{"name"=>"Simon Zhen", "email"=>"simon@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update account", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "simon@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Simon Zhen"], ["updated_at", "2017-07-27 04:55:02.054360"], ["id", 1]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://railscourse-sibeatriz.c9users.io/users/1
+Completed 302 Found in 37ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/users/1" for 50.67.245.103 at 2017-07-27 04:55:02 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered reviews/_review.html.erb (13.1ms)
+  Rendered users/show.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 70ms (Views: 67.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for 50.67.245.103 at 2017-07-27 04:59:46 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered reviews/_review.html.erb (2.3ms)
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 132ms (Views: 129.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 50.67.245.103 at 2017-07-27 04:59:48 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.9ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered reviews/_review.html.erb (3.6ms)
+  Rendered users/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 76.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:00:11 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 115ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:01:59 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ubuntu/rails_project/filmstudies/app/views/sessions/new.html.erb:1: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+...ared/page_title', title: Log In );@output_buffer.safe_append...
+...                               ^
+/home/ubuntu/rails_project/filmstudies/app/views/sessions/new.html.erb:3: syntax error, unexpected keyword_do_block, expecting keyword_end
+...e: "form"}, url: login_path) do |f| @output_buffer.safe_appe...
+...                               ^
+/home/ubuntu/rails_project/filmstudies/app/views/sessions/new.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/sessions/new.html.erb:1: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/sessions/new.html.erb:3: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/sessions/new.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:02:13 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:02:28 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:06:04 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:39:10 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 119.9ms)
+
+
+Started GET "/signup" for 50.67.245.103 at 2017-07-27 05:39:32 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 50.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for 50.67.245.103 at 2017-07-27 05:39:40 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AI9dJc7EC9BJiwjU4IaJ4H9jBf91WuuDe8tZzn4MlTQJ1Sl2Ax+m3xkM0RVrZ3W1rZ7Xio+mrQBV6epm2Ufx6Q==", "user"=>{"name"=>"Nowis", "email"=>"nowis2010@msn.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "nowis2010@msn.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nowis"], ["email", "nowis2010@msn.com"], ["created_at", "2017-07-27 05:39:40.245571"], ["updated_at", "2017-07-27 05:39:40.245571"], ["password_digest", "$2a$10$dp2C2j1yIvPeJnOt90PCkeEoUxpcNx1odSCeeJTmBwHhyJ27n/lFC"]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://railscourse-sibeatriz.c9users.io/users/2
+Completed 302 Found in 88ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/users/2" for 50.67.245.103 at 2017-07-27 05:39:40 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered reviews/_review.html.erb (6.4ms)
+  Rendered users/show.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 66.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 05:39:45 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (12.5ms)
+  Rendered reviews/index.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reviews/new" for 50.67.245.103 at 2017-07-27 05:39:46 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered reviews/_form.html.erb (5.4ms)
+  Rendered reviews/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 50.67.245.103 at 2017-07-27 05:39:50 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B/nEjLeskRNpP288fonGVbgblHm1UTsLFfT92ExKpKFmu4GItisTdl6URJ3Q11c7f2m9TlFemcfgPu9tR7sjmQ==", "review"=>{"movie"=>"Test", "name"=>"Test", "description"=>"test"}, "commit"=>"Create Review"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered reviews/_form.html.erb (3.9ms)
+  Rendered reviews/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 50.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/reviews" for 50.67.245.103 at 2017-07-27 05:39:53 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WcZR4q/6Vj56GO9qIjvjrb46Htav9V6H7iT01awHrIHbloNbdJqGBaPGISnsvHddmgu5WW0sSWe+ISZUnMn0HQ==", "review"=>{"movie"=>"Test", "name"=>"Test", "description"=>"testasdad"}, "commit"=>"Create Review"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("name", "movie", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Test"], ["movie", "Test"], ["description", "testasdad"], ["created_at", "2017-07-27 05:39:53.874509"], ["updated_at", "2017-07-27 05:39:53.874509"], ["user_id", 1]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://railscourse-sibeatriz.c9users.io/reviews/4
+Completed 302 Found in 17ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/reviews/4" for 50.67.245.103 at 2017-07-27 05:39:53 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 68.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 50.67.245.103 at 2017-07-27 05:40:00 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pKFHSanHN9CSUpyxOSHOTKmdOJBH850GmGzFo+9IIVom8ZXwcqfn60uMUvL3plq8jayfH4UqiubIaRci34Z5xg=="}
+Redirected to https://railscourse-sibeatriz.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:40:00 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 214ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:40:08 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.67.245.103 at 2017-07-27 05:40:15 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4f1X2iycUm4V3QEwKtl8fb5fuF/w9v44lDenVD1bOKW3c/Hf4R1jrtVmmFKc2vLB+1OxV1iw8cgRUTXqRA3vAw==", "session"=>{"email"=>"nowis2010@msn.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nowis2010@msn.com"], ["LIMIT", 1]]
+Redirected to https://railscourse-sibeatriz.c9users.io/users/2
+Completed 302 Found in 70ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 50.67.245.103 at 2017-07-27 05:40:15 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered reviews/_review.html.erb (2.0ms)
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 50.67.245.103 at 2017-07-27 05:40:19 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ByTBpX+siRO6N5kTlDIr/mxoXjoRXEQzlseEmJPcf+6FdBMcpMxZKGPpV1Batb8OSFn5tdOFU9PGwlYZoxIncg=="}
+Redirected to https://railscourse-sibeatriz.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:40:19 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 217ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:40:49 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.67.245.103 at 2017-07-27 05:40:53 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZTCM6aUFa7jKEVZn4iaFItqHK/bMo1Pq5C1MHnYPAGszvirsaIRaeAqqzwVUJQuen4si/mTlXBphS96gD1nXzQ==", "session"=>{"email"=>"nowis2010@msn.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nowis2010@msn.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:42:01 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 263ms (Views: 114.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 05:42:03 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (6.0ms)
+  Rendered reviews/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 05:42:49 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (5.8ms)
+  Rendered reviews/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 75.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 05:43:10 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (4.1ms)
+  Rendered reviews/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 05:50:04 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/rails_project/filmstudies/app/controllers/application_controller.rb:19: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/application_controller.rb:19: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/reviews_controller.rb:1:in `<top (required)>'
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:50:12 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/rails_project/filmstudies/app/controllers/application_controller.rb:19: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/application_controller.rb:19: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:50:33 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 194ms (Views: 56.8ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 05:50:36 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (22.4ms)
+  Rendered reviews/index.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 68.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:50:57 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 200ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 05:51:00 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.67.245.103 at 2017-07-27 05:51:06 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NQQ1Ky6KZ0JCMcDEUjhbuKG9SifRuS4yJZtJewpIz29jipMu4wtWgoKKWabkO9UE5LFDL3n/IcKg/dvFcx4YyQ==", "session"=>{"email"=>"nowis2010@msn.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nowis2010@msn.com"], ["LIMIT", 1]]
+Redirected to https://railscourse-sibeatriz.c9users.io/users/2
+Completed 302 Found in 70ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 50.67.245.103 at 2017-07-27 05:51:06 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered reviews/_review.html.erb (3.3ms)
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:51:21 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 225ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:55:36 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 198ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:55:47 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 221ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:56:03 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 203ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:56:22 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 198ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 05:57:38 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 193ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 05:58:28 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (86.7ms)
+  Rendered reviews/index.html.erb within layouts/application (89.8ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 138.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/reviews/new" for 50.67.245.103 at 2017-07-27 05:58:30 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered reviews/_form.html.erb (6.3ms)
+  Rendered reviews/new.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 50.67.245.103 at 2017-07-27 05:58:43 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gAeG8DnKzrekqqMxHYNwK0KNaYZPPcQeajwYp2Jyc+HQlsfwWCpX+k5gS1qKJyuangckf0zVdyMYuLXlnhO9w==", "review"=>{"movie"=>"Planet of the Apes", "name"=>"It was bad", "description"=>"HAHAHAHAHA"}, "commit"=>"Create Review"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("name", "movie", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "It was bad"], ["movie", "Planet of the Apes"], ["description", "HAHAHAHAHA"], ["created_at", "2017-07-27 05:58:43.893795"], ["updated_at", "2017-07-27 05:58:43.893795"], ["user_id", 2]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://railscourse-sibeatriz.c9users.io/reviews/5
+Completed 302 Found in 198ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/reviews/5" for 50.67.245.103 at 2017-07-27 05:58:44 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 05:58:50 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (5.9ms)
+  Rendered reviews/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews/5" for 50.67.245.103 at 2017-07-27 05:58:55 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:01:29 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 197ms (Views: 53.8ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:03:48 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_navigation.html.erb (197.3ms)
+Completed 500 Internal Server Error in 410ms
+
+
+  
+ActionView::Template::Error (undefined method `loggin_in?' for #<#<Class:0x007f4c643478a0>:0x007f4c6c79d078>
+Did you mean?  logged_in?):
+    36:       <% end %>
+    37:       </form>
+    38:       <ul class="nav navbar-nav navbar-right">
+    39:         <% if loggin_in? %>
+    40:           <li><%= link_to 'Login', login_path %></li>
+    41:         <% else %>
+    42:           <li><%= link_to "Log out", logout_path, method: :delete %></li>
+  
+app/views/layouts/_navigation.html.erb:39:in `_app_views_layouts__navigation_html_erb__4173400585495177808_69983155851760'
+app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___3650757702465863140_69982972283620'
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:03:57 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (13.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 204ms (Views: 69.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 06:04:03 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (22.4ms)
+  Rendered reviews/index.html.erb within layouts/application (25.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 145ms (Views: 138.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/reviews/2" for 50.67.245.103 at 2017-07-27 06:04:06 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 198ms (Views: 194.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 06:04:08 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 50.67.245.103 at 2017-07-27 06:04:12 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ndoy5gx4zHXtDzidA9WijqfPYl97TB8jx0n2ExeeXmHLVJTjwfn9tS20of+11iwy4sNrV9MKENNCL2StbsiJxw==", "session"=>{"email"=>"nowis2010@msn.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nowis2010@msn.com"], ["LIMIT", 1]]
+Redirected to https://railscourse-sibeatriz.c9users.io/users/2
+Completed 302 Found in 70ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 50.67.245.103 at 2017-07-27 06:04:12 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/rails_project/filmstudies/app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting keyword_do or '{' or '('
+  before_action :set_user, only [:show, :edit, :update]
+                                 ^):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting keyword_do or '{' or '('
+Started GET "/users/2" for 50.67.245.103 at 2017-07-27 06:05:05 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered reviews/_review.html.erb (11.2ms)
+  Rendered users/show.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 66.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:05:09 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (12.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 226ms (Views: 91.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:07:02 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (13.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 231ms (Views: 64.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:07:53 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 217ms (Views: 66.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 50.67.245.103 at 2017-07-27 06:09:54 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NEDMSscUyX2NFcT/XDEotmnV8fnzUYf4qQGBvMxsxZy2EB7zHHQZRlTLCryStrxGTeRWdjGIkBj5BFM9/KKdAA=="}
+Redirected to https://railscourse-sibeatriz.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:09:54 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 210ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:10:50 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (27.6ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 211ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/movie?id=334521&overview=A+crime+drama+set+in+1970s+Boston%2C+about+a+gun+sale+which+goes+wrong.&poster_path=%2FrGOIFsq0lQ0Dm3zlxFwNYOYkbIk.jpg&release_date=2017-03-31&title=Free+Fire" for 50.67.245.103 at 2017-07-27 06:11:12 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#movie as HTML
+  Parameters: {"id"=>"334521", "overview"=>"A crime drama set in 1970s Boston, about a gun sale which goes wrong.", "poster_path"=>"/rGOIFsq0lQ0Dm3zlxFwNYOYkbIk.jpg", "release_date"=>"2017-03-31", "title"=>"Free Fire"}
+  Rendering pages/movie.html.erb within layouts/application
+  Rendered pages/movie.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:18:37 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 203ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.67.245.103 at 2017-07-27 06:18:38 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 50.67.245.103 at 2017-07-27 06:18:42 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vy+UC6Ku+VSPgkK5Gdp1GbMeygaD/zLhZNjpnPBMkRLpoTIOby/IlE8529uv2ful9hLDDiu5PRHhvnsiiRpGtA==", "session"=>{"email"=>"nowis2010@msn.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nowis2010@msn.com"], ["LIMIT", 1]]
+Redirected to https://railscourse-sibeatriz.c9users.io/users/2
+Completed 302 Found in 70ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 50.67.245.103 at 2017-07-27 06:18:42 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered reviews/_review.html.erb (3.1ms)
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:18:44 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 201ms (Views: 61.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 50.67.245.103 at 2017-07-27 06:18:50 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gp4JgiunJc2ZYyu+3sQAcZi6Eg1EcBrScNK5pViUII4Azts78Mf19kC95f0QQ5SBvIu1goapDTIg12skaFp4Eg=="}
+Redirected to https://railscourse-sibeatriz.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:18:51 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 198ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 06:19:10 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.5ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (9.8ms)
+  Rendered reviews/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 92ms (Views: 89.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 06:19:27 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (5.5ms)
+  Rendered reviews/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 06:19:32 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (5.7ms)
+  Rendered reviews/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reviews" for 50.67.245.103 at 2017-07-27 06:19:35 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered shared/_page_title.html.erb (0.3ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/_review.html.erb (5.3ms)
+  Rendered reviews/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 50.67.245.103 at 2017-07-27 06:19:38 +0000
+Cannot render console from 50.67.245.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 191ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+

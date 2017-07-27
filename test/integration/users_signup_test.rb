@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
+  
   test "should get signup path" do
     get signup_path
     assert_response :success
@@ -12,6 +13,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, params: {user: {name: "", email: "", password: "pass",
                                 password_confirmation: ""}}
     end
+    assert_template 'users/new'
+    assert_select 'h2.panel-title'
+    assert_select 'div.panel-body'
   end
   
   test "accept valid signup" do
